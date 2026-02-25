@@ -1,4 +1,4 @@
-/* --- Base Variables & Setup --- */
+
 :root {
 
   --text-primary: #000000;
@@ -15,29 +15,28 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 
      
-    /* Brand Colors */
-    --color-primary-dark: #000000; /* Jet Black */
-    --color-secondary-dark: #3A3A3A; /* Slate Grey */
-    --color-light: #FFFFFF; /* White */
 
-        /* TEXT COLORS (LIGHT MODE) */
+    --color-primary-dark: #000000;
+    --color-secondary-dark: #3A3A3A; 
+    --color-light: #FFFFFF; 
+
+       
     --text-primary: #000000;
     --text-secondary: #333333;
 
-    /* BACKGROUND COLORS */
+
     --bg-primary: #FFFFFF;
 
-    
-    /* Accent Gradient (Blue Gradient: Royal Blue to Sky Blue) */
+  
     --color-accent-start: #4A6CF7;
     --color-accent-end: #83A4FF;
     --gradient-accent: linear-gradient(135deg, var(--color-accent-start) 0%, var(--color-accent-end) 100%);
 
-    /* Fonts */
+    
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Inter', sans-serif;
 
-    /* Spacing System */
+ 
     --spacing-xs: 8px;
     --spacing-sm: 15px;
     --spacing-md: 30px;
@@ -45,7 +44,7 @@ body {
     --spacing-xl: 100px;
 }
 
-/* Dark/Light mode toggle icon fix */
+
  body.dark-mode { 
    --text-primary: #ffffff; 
    --text-secondary: #cfcfcf; 
@@ -54,7 +53,7 @@ body {
    --accent-color: #6a5cff; 
  } 
 
-/* Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -70,14 +69,12 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Typography */
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: var(--text-primary); /* 👈 CHANGE THIS */
+    color: var(--text-primary);
     font-weight: 700;
-    /* font-family: var(--font-heading); */
-    /* color: var(--color-primary-dark); */
-    /* font-weight: 700; */
+    
 }
 
 .menu-toggle {
@@ -89,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* MOBILE */
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -126,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 0.9em;
     height: 0.9em;
 
-    background-image: url("../images/skycamra.png"); /* NOTE ../ */
+    background-image: url("../images/skycamra.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -186,7 +183,7 @@ a:hover {
     transform: translateX(-50%);
 }
 
-/* --- Utility Classes --- */
+
 .bg-light { background-color: #F8F8F8; }
 .bg-dark-alt { background-color: var(--color-secondary-dark); }
 .d-flex { display: flex; }
@@ -209,7 +206,7 @@ a:hover {
 }
 
 
-/* --- Buttons --- */
+
 .btn-cta, .btn-secondary {
     display: inline-block;
     padding: 12px 30px;
@@ -231,17 +228,14 @@ a:hover {
 .btn-cta:hover {
     box-shadow: 0 8px 20px rgba(74, 108, 247, 0.6);
     transform: translateY(-2px);
-    color: var(--color-light); /* keep color white on hover */
+    color: var(--color-light); 
 }
 
 .btn-secondary {
      background-color: transparent;
     color: var(--text-primary);
     border: 2px solid var(--color-accent-start);
-    /* background-color: var(--color-primary-dark); */
-    /* color: var(--color-light); */
-    /* border: 2px solid var(--color-primary-dark); */
-}
+    
 
 .btn-secondary:hover {
     background: var(--gradient-accent);
@@ -249,7 +243,7 @@ a:hover {
     color: var(--color-light);
 }
 
-/* --- Header & Navigation --- */
+\
 #header {
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(5px);
@@ -282,11 +276,11 @@ a:hover {
 
 .site-logo {
 
-  height: 60px; /* adjust if needed */
+  height: 60px;
   width: auto;
   
 }
-/* changes till navbar*/
+
 @media (max-width: 768px) {
   .mobile-menu-btn {
     display: block;
@@ -323,7 +317,7 @@ a:hover {
 #mode-toggle:hover {
     color: var(--color-accent-start);
 }
-/* MOBILE MENU BUTTON */
+
 .mobile-menu-btn {
   position: fixed;
   top: 20px;
@@ -332,9 +326,7 @@ a:hover {
   cursor: pointer;
   z-index: 1001;
   display: none;
-}
 
-/* MOBILE MENU */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -350,15 +342,10 @@ a:hover {
  
 }
 
-/*.mobile-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  margin-bottom: 20px;
-}*/
-/* MENU LINKS */
+
+
 .mobile-menu a {
-  color: #111111;                /* visible on white */
+  color: #111111;                
   text-decoration: none;
   font-size: 20px;
   margin-bottom: 20px;
@@ -368,7 +355,7 @@ a:hover {
   font-weight: 500;
 }
 
-/* HOVER + ACTIVE */
+
 .mobile-menu a:hover,
 .mobile-menu a:active {
   color: #83A4FF;
@@ -380,12 +367,12 @@ a:hover {
 }
 
 
-/* ACTIVE STATE */
+
 .mobile-menu.active {
   right: 0;
 }
 
-/* Optional overlay blur effect */
+
 body.menu-open::before {
   content: "";
   position: fixed;
@@ -396,7 +383,6 @@ body.menu-open::before {
 }
 
 
-/* SHOW ONLY ON MOBILE */
 @media (max-width: 768px) {
   .mobile-menu-btn {
     display: block;
@@ -407,7 +393,7 @@ body.menu-open::before {
 
 
 
-/* --- HERO SECTION --- */
+
 #hero {
     width: 100%;
     height: 100vh;
@@ -415,8 +401,7 @@ body.menu-open::before {
     position: relative;
     display: flex;
     text-align: center;
-    padding-top: 80px; /* Account for sticky header */
-}
+    padding-top: 80px; 
 
 .hero-bg-gradient {
     position: absolute;
@@ -455,7 +440,7 @@ body.menu-open::before {
     letter-spacing: 2px;
 }
 
-/* Smooth Scroll Arrow */
+
 .smooth-scroll-arrow {
     position: absolute;
     bottom: var(--spacing-md);
@@ -476,7 +461,7 @@ body.menu-open::before {
     60% {transform: translateY(-5px);}
 }
 
-/* Floating Shapes (Bonus) - Simple CSS animation */
+
 .floating-shape {
     position: absolute;
     opacity: 0.1;
@@ -507,7 +492,7 @@ body.menu-open::before {
     100% { transform: translate(0, 0); }
 }
 
-/* --- ABOUT US SECTION --- */
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -563,7 +548,7 @@ body.menu-open::before {
     margin-right: 10px;
 }
 
-/* --- SERVICES SECTION --- */
+
 .services-grid {
     display: grid;
     gap: var(--spacing-md);
@@ -618,7 +603,7 @@ body.menu-open::before {
     font-size: 1.2rem;
 }
 
-/* --- PORTFOLIO SECTION --- */
+
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -656,7 +641,7 @@ body.menu-open::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(74, 108, 247, 0.85); /* Accent color overlay */
+    background: rgba(74, 108, 247, 0.85); 
     color: var(--color-light);
     display: flex;
     flex-direction: column;
@@ -675,7 +660,7 @@ body.menu-open::before {
     font-weight: 500;
 }
 
-/* --- FEATURES SECTION --- */
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -705,13 +690,12 @@ body.menu-open::before {
     color: #ccc;
 }
 
-/* Hover micro-interaction */
+
 .feature-box:hover {
     background: rgba(74, 108, 247, 0.1);
     border-color: var(--color-accent-start);
 }
 
-/* --- CLIENTS SECTION --- */
 .clients-logos {
     display: flex;
     flex-wrap: wrap;
@@ -737,10 +721,10 @@ body.menu-open::before {
     opacity: 1;
 }
 
-/* --- TESTIMONIALS SECTION --- */
+
 .testimonial-slider-container {
     display: flex;
-    overflow-x: auto; /* Enable sliding effect (for CSS-only simplicity) */
+    overflow-x: auto; 
     scroll-snap-type: x mandatory;
     padding-bottom: 20px;
     gap: var(--spacing-md);
@@ -762,7 +746,7 @@ body.menu-open::before {
 }
 
 .testimonial-card .quote::before {
-    content: "\f10d"; /* Font Awesome quote icon */
+    content: "\f10d"; 
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     color: var(--color-accent-start);
@@ -800,7 +784,7 @@ body.menu-open::before {
     color: var(--color-secondary-dark);
 }
 
-/* --- CONTACT SECTION --- */
+
 .contact-grid {
     display: flex;
     gap: var(--spacing-lg);
@@ -853,7 +837,7 @@ body.menu-open::before {
     border-radius: 10px;
 }
 
-/* --- FOOTER --- */
+
 #footer {
     background-color: var(--color-primary-dark);
     color: var(--color-light);
@@ -930,7 +914,7 @@ body.menu-open::before {
     color: #ff4d4d;
 }
 
-/* --- FLOATING WHATSAPP BUTTON --- */
+
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -954,7 +938,7 @@ body.menu-open::before {
     transform: scale(1.05);
 }
 
-/* --- PRELOADER (Optional) --- */
+
 #preloader {
     position: fixed;
     top: 0;
@@ -982,7 +966,7 @@ body.menu-open::before {
     to { transform: rotate(360deg); }
 }
 
-/* --- LIGHT/DARK MODE STYLES (Toggle via JS) --- */
+
 body.dark-mode {
     --color-primary-dark: #FFFFFF;
     --color-secondary-dark: #C0C0C0;
@@ -1020,9 +1004,9 @@ body.dark-mode .client-logo-placeholder {
     border: 1px dashed var(--color-secondary-dark);
 }
 
-/* --- RESPONSIVENESS (Mobile First) --- */
+
 @media (max-width: 992px) {
-    /* General */
+  
     .section-padding {
         padding: var(--spacing-lg) 0;
     }
@@ -1030,8 +1014,7 @@ body.dark-mode .client-logo-placeholder {
         font-size: 2rem;
         margin-bottom: var(--spacing-md);
     }
-    
-    /* Header */
+
     #navbar {
         position: fixed;
         top: 0;
@@ -1075,7 +1058,7 @@ body.dark-mode .client-logo-placeholder {
         font-size: 1.3rem;
     }
     
-    /* About */
+
     .col-lg-6 {
         width: 100%;
         padding: 0;
@@ -1085,15 +1068,14 @@ body.dark-mode .client-logo-placeholder {
         height: 300px;
     }
     
-    /* Contact */
+
     .contact-grid {
         flex-direction: column;
     }
     .contact-form-col, .contact-info-col {
         width: 100%;
     }
-    
-    /* Footer */
+
     .footer-top {
         flex-direction: column;
         gap: var(--spacing-md);
@@ -1109,7 +1091,7 @@ body.dark-mode .client-logo-placeholder {
         margin-bottom: 10px;
     }
     
-    /* WhatsApp */
+
     .whatsapp-float {
         width: 50px;
         height: 50px;
@@ -1118,7 +1100,7 @@ body.dark-mode .client-logo-placeholder {
         font-size: 25px;
     }
 
-    /* 📱 MOBILE PAGE FADE ANIMATION */
+   
 @media (max-width: 768px) {
   body {
     animation: mobilePageFade 0.4s ease-out;
@@ -1138,4 +1120,5 @@ body.dark-mode .client-logo-placeholder {
 
 
 }
+
 
