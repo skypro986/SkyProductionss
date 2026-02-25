@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Preloader Animation
+   
     const preloader = document.getElementById('preloader');
     if (preloader) {
         window.addEventListener('load', () => {
-            // Fade out the preloader after content loads
+            
             preloader.style.opacity = '0';
             setTimeout(() => {
                 preloader.style.display = 'none';
-            }, 500); // Wait 500ms for fade out transition
+            }, 500); 
         });
-        // Disable preloader on mobile
+      
     if (window.innerWidth < 768) {
         preloader.style.display = 'none';
     } else {
@@ -35,7 +35,7 @@ menuBtn.addEventListener("click", () => {
     mobileMenu.classList.remove("active");
   }
 });
-// Close menu when clicking any mobile menu link
+
 document.querySelectorAll("#mobileMenu a").forEach(link => {
   link.addEventListener("click", () => {
     mobileMenu.classList.remove("active");
@@ -45,7 +45,7 @@ document.querySelectorAll("#mobileMenu a").forEach(link => {
 });
 
 
-    // 2. Sticky Header & Active Nav Links
+    
     const header = document.getElementById('header');
     const sections = document.querySelectorAll('main section');
     const navLinks = document.querySelectorAll('#navbar a.nav-link');
@@ -57,10 +57,10 @@ document.querySelectorAll("#mobileMenu a").forEach(link => {
             header.classList.remove('header-scrolled');
         }
 
-        // Highlight active link based on scroll position
+       
         let current = '';
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 80; // Adjusted for header height
+            const sectionTop = section.offsetTop - 80; 
             if (window.scrollY >= sectionTop) {
                 current = section.getAttribute('id');
             }
@@ -75,13 +75,13 @@ document.querySelectorAll("#mobileMenu a").forEach(link => {
     };
 
     window.addEventListener('scroll', stickyHeader);
-    stickyHeader(); // Initial check
+    stickyHeader();
 
    
 
-  // EMAILJS CONTACT FORM
+  
 (function () {
-  emailjs.init('lz2JmrSq9ssvSoJ-M'); // public key
+  emailjs.init('lz2JmrSq9ssvSoJ-M'); 
 })();
 
 const form = document.getElementById('contact-form');
@@ -118,3 +118,4 @@ if (form) {
   });
 }
 });
+
